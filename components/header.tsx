@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 import Consultation from "./consultation";
 import Smile from "./smile";
@@ -8,8 +8,8 @@ export default function Header() {
     <section className="hidden lg:flex lg:flex-row pt-28 space-x-11 lg:items-center">
       <div className="lg:w-1/2">
         <p className="text-[50px] leading-[64px] tracking-[0.06em] text-textp font-bold">
-          Your Health, Our <br />
-          Happiness
+          Your Health, <br />
+          Our Happiness
         </p>
         <p className="pt-[29px] pb-[50px] leading-[26px] tracking-[0.04em] text-textp/50 text-[12px]">
           In the new normal era like now, your health is very important,
@@ -22,8 +22,8 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <div className="lg:w-1/2 w-full">
-        <div className="relative">
+      <div className="lg:w-1/2">
+        <div className="relative w-full h-[400px]">
           {/* <Image
             src="/header-bg.svg"
             alt="yuhuu"
@@ -34,11 +34,10 @@ export default function Header() {
           <Image
             src="/doctor2.png"
             alt="yuhuu"
-            width={324}
-            height={431}
-            className="w-auto h-[400px] absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/3 z-10"
+            layout="fill"
+            objectFit="contain"
           />
-          <div className="bg-white shadow-md absolute -top-40 -right-10 z-20 px-[24px] py-[20px] rounded-xl">
+          <div className="bg-white shadow-md absolute -top-10 -right-10 z-20 px-[24px] py-[20px] rounded-xl">
             <span className="flex flex-row items-center space-x-4">
               <Consultation />
               <p className="text-[16px] leading-[64px] tracking-[0.06em] font-semibold text-textp">
@@ -49,7 +48,7 @@ export default function Header() {
               Consultation with the best
             </p>
           </div>
-          <div className="bg-white shadow-md absolute  z-20 px-[24px] py-[20px] rounded-xl">
+          <div className="bg-white shadow-md absolute top-1/2 z-20 px-[24px] py-[20px] rounded-xl">
             <span className="flex flex-row items-center space-x-4">
               <Smile />
             </span>
